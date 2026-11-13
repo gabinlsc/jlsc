@@ -1,0 +1,60 @@
+{
+  "_commentaire": "Configuration générale du site. Les valeurs marquées À REMPLACER sont listées dans TODO-CONTENU.md.",
+  "siteName": "Jacques Lescoat",
+  "tagline": "Géographe — la Bretagne et ses îles",
+  "url": "https://jlescoat.glsc.fr",
+  "lang": "fr",
+  "locale": "fr_FR",
+  "author": {
+    "name": "Jacques Lescoat",
+    "jobTitle": "Géographe et auteur",
+    "email": "contact@jlescoat.glsc.fr",
+    "portrait": "assets/portrait.jpg",
+    "sameAs": []
+  },
+  "forms": {
+    "_aide": "contactAction / notifyAction : 'mailto:' (défaut, ouvre la messagerie du visiteur) ou URL d'un service de formulaire (ex. https://formspree.io/f/xxxx). Relancer ./deploy.sh init après changement d'URL (CSP).",
+    "contactAction": "mailto:",
+    "notifyAction": "mailto:"
+  },
+  "legal": {
+    "_aide": "statut : 'particulier', 'micro-entreprise' ou 'association'.",
+    "statut": "micro-entreprise",
+    "raisonSociale": "Jacques Lescoat",
+    "adresse": "Adresse postale à renseigner",
+    "siret": "SIRET à renseigner",
+    "rna": "",
+    "tva": "TVA non applicable, art. 293 B du CGI",
+    "directeurPublication": "Jacques Lescoat",
+    "mediateur": {
+      "nom": "Médiateur de la consommation à désigner",
+      "url": ""
+    },
+    "hebergeur": {
+      "nom": "Hébergeur du VPS à renseigner",
+      "adresse": "Adresse de l'hébergeur à renseigner",
+      "telephone": "Téléphone de l'hébergeur à renseigner"
+    }
+  },
+  "shipping": {
+    "_aide": "Textes affichés sur les fiches livres et dans les CGV. À adapter aux réglages Payhip.",
+    "envoi": "Envoi postal en France métropolitaine. Frais de port calculés lors du paiement.",
+    "retrait": "Retrait possible en main propre lors des conférences et séances de dédicace, sur rendez-vous.",
+    "dedicace": "Dédicace possible sur demande : précisez le prénom souhaité dans la note de commande."
+  },
+  "analytics": {
+    "_aide": "Désactivé par défaut (aucune bannière cookies nécessaire). provider : 'plausible' ou 'umami'. Relancer ./deploy.sh init après activation (CSP).",
+    "enabled": false,
+    "provider": "plausible",
+    "src": "https://plausible.io/js/script.js",
+    "domain": "jlescoat.glsc.fr",
+    "websiteId": ""
+  },
+  "nav": [
+    { "label": "Livres", "href": "/livres/" },
+    { "label": "Territoires", "href": "/territoires/" },
+    { "label": "L'auteur", "href": "/auteur/" },
+    { "label": "Conférences", "href": "/conferences/" },
+    { "label": "Contact", "href": "/contact/" }
+  ]
+}

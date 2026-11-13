@@ -1,0 +1,12 @@
+# Dépendances et build
+node_modules/
+dist/
+.cache/
+
+# Configuration locale de déploiement (jamais versionnée)
+deploy.config.env
+
+# Divers
+.DS_Store
+*.log
+.env

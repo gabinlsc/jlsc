@@ -1,0 +1,271 @@
+[
+  {
+    "slug": "ouessant",
+    "name": "Ouessant",
+    "breton": "Eusa",
+    "type": "île",
+    "departement": "Finistère",
+    "lon": -5.09,
+    "lat": 48.46,
+    "label": {
+      "pos": "left"
+    },
+    "intro": "L'île la plus occidentale de la Bretagne, en mer d'Iroise, au large du Finistère.",
+    "presentation": [
+      "Ouessant marque l'extrémité occidentale de la Bretagne. Exposée aux vents d'ouest et aux courants de la mer d'Iroise, l'île offre un paysage ouvert de landes, de prairies rases et de côtes rocheuses.",
+      "Présentation à compléter par l'auteur : relief, habitat, liaisons maritimes, activités. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "molene",
+    "name": "Molène",
+    "breton": "Molenez",
+    "type": "archipel",
+    "departement": "Finistère",
+    "lon": -4.96,
+    "lat": 48.4,
+    "label": {
+      "pos": "below"
+    },
+    "intro": "Un archipel d'îlots bas entre Ouessant et le continent, dont une seule île est habitée en permanence.",
+    "presentation": [
+      "L'archipel de Molène se compose d'une poussière d'îles et d'îlots peu élevés, posés sur un vaste plateau rocheux entre Ouessant et la pointe du Conquet.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "sein",
+    "name": "Île de Sein",
+    "breton": "Enez-Sun",
+    "type": "île",
+    "departement": "Finistère",
+    "lon": -4.85,
+    "lat": 48.04,
+    "label": {
+      "pos": "left"
+    },
+    "intro": "Une île basse et étroite au large de la pointe du Raz, à l'entrée de la baie d'Audierne.",
+    "presentation": [
+      "L'île de Sein prolonge en mer la pointe du Raz. Très basse sur l'eau, elle est soumise aux tempêtes et aux submersions, ce qui a façonné un habitat resserré autour du port.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "glenan",
+    "name": "Les Glénan",
+    "breton": "Glenan",
+    "type": "archipel",
+    "departement": "Finistère",
+    "lon": -3.99,
+    "lat": 47.72,
+    "label": {
+      "pos": "below"
+    },
+    "intro": "Un archipel au large de Concarneau et de Fouesnant, connu pour ses eaux claires et sa navigation.",
+    "presentation": [
+      "L'archipel des Glénan forme un ensemble d'îles et d'îlots autour d'une lagune intérieure, au sud du Finistère.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "groix",
+    "name": "Groix",
+    "breton": "Enez Groe",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -3.46,
+    "lat": 47.64,
+    "label": {
+      "pos": "below"
+    },
+    "intro": "L'île qui fait face à la rade de Lorient, longtemps tournée vers la grande pêche.",
+    "presentation": [
+      "Groix se dresse en face de Lorient. Ses côtes contrastent : falaises au nord et à l'ouest, criques et plages plus abritées ailleurs.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "belle-ile",
+    "name": "Belle-Île-en-Mer",
+    "breton": "Ar Gerveur",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -3.18,
+    "lat": 47.33,
+    "label": {
+      "pos": "below"
+    },
+    "intro": "La plus grande des îles bretonnes, au sud de la presqu'île de Quiberon.",
+    "presentation": [
+      "Belle-Île est la plus vaste des îles de Bretagne. Plateau entaillé de vallons, bordé de falaises côté large et de ports abrités côté continent, elle forme presque un petit pays à elle seule.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "houat",
+    "name": "Houat",
+    "breton": "Houad",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -2.96,
+    "lat": 47.39,
+    "label": {
+      "pos": "right"
+    },
+    "intro": "Une petite île granitique entre Quiberon et Hoëdic, dans la baie de Quiberon.",
+    "presentation": [
+      "Houat, avec sa voisine Hoëdic, ferme au sud la baie de Quiberon. Petite et granitique, elle associe un bourg groupé et de grandes plages.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "hoedic",
+    "name": "Hoëdic",
+    "breton": "Edig",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -2.88,
+    "lat": 47.34,
+    "label": {
+      "pos": "right"
+    },
+    "intro": "Une petite île basse au sud-est de Houat, face à la presqu’île de Rhuys.",
+    "presentation": [
+      "Hoëdic prolonge Houat vers le sud-est. Île basse et discrète, elle garde une population permanente réduite et une forte identité.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "ile-aux-moines",
+    "name": "Île-aux-Moines",
+    "breton": "Izenah",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -2.85,
+    "lat": 47.6,
+    "label": {
+      "pos": "below"
+    },
+    "intro": "Une des grandes îles intérieures du golfe du Morbihan, à quelques minutes de bateau du continent.",
+    "presentation": [
+      "Île du golfe du Morbihan, l'Île-aux-Moines s'étire en forme de croix au milieu d'une mer intérieure abritée, très différente des îles du large.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "arz",
+    "name": "Île d'Arz",
+    "breton": "Arzh",
+    "type": "île",
+    "departement": "Morbihan",
+    "lon": -2.8,
+    "lat": 47.595,
+    "label": {
+      "pos": "right"
+    },
+    "intro": "Une île basse du golfe du Morbihan, voisine de l'Île-aux-Moines.",
+    "presentation": [
+      "L'île d'Arz est l'autre grande île habitée du golfe du Morbihan. Ses côtes découpées alternent pointes, anses et marais.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "brehat",
+    "name": "Bréhat",
+    "breton": "Enez Vriad",
+    "type": "archipel",
+    "departement": "Côtes-d'Armor",
+    "lon": -3.0,
+    "lat": 48.85,
+    "label": {
+      "pos": "right"
+    },
+    "intro": "Un archipel au large de Paimpol, dans les Côtes-d'Armor, réputé pour la douceur de son climat.",
+    "presentation": [
+      "Bréhat est un archipel d'îles et d'îlots rocheux face à la pointe de l'Arcouest. Les îles principales sont parcourues à pied ou à vélo.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "batz",
+    "name": "Île de Batz",
+    "breton": "Enez Vaz",
+    "type": "île",
+    "departement": "Finistère",
+    "lon": -4.02,
+    "lat": 48.75,
+    "label": {
+      "pos": "above"
+    },
+    "intro": "Une île face à Roscoff, sur la côte nord du Finistère, cultivée en légumes de plein champ.",
+    "presentation": [
+      "L'île de Batz fait face au port de Roscoff, dont elle n'est séparée que par un étroit chenal. Elle partage avec le Léon voisin une tradition maraîchère.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "sept-iles",
+    "name": "Les Sept-Îles",
+    "breton": "Ar Seizh Enez",
+    "type": "archipel",
+    "departement": "Côtes-d'Armor",
+    "lon": -3.49,
+    "lat": 48.88,
+    "label": {
+      "pos": "above"
+    },
+    "intro": "Un archipel inhabité au large de Perros-Guirec, protégé pour ses colonies d'oiseaux marins.",
+    "presentation": [
+      "Les Sept-Îles forment un petit archipel au large de la Côte de Granit rose. Espace protégé, il abrite d'importantes colonies d'oiseaux marins.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "iroise",
+    "name": "Mer d'Iroise",
+    "breton": "Mor Hir",
+    "type": "zone",
+    "departement": "Finistère",
+    "lon": -5.02,
+    "lat": 48.22,
+    "label": {
+      "pos": "left"
+    },
+    "intro": "L'espace marin de l'extrême ouest breton, entre Ouessant, Molène, Sein et le continent.",
+    "presentation": [
+      "La mer d'Iroise baigne la pointe du Finistère. Ses courants puissants et ses écueils en font un espace maritime exigeant, aujourd'hui protégé par un parc naturel marin.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "golfe-du-morbihan",
+    "name": "Golfe du Morbihan",
+    "breton": "Mor-bihan",
+    "type": "zone",
+    "departement": "Morbihan",
+    "lon": -2.88,
+    "lat": 47.63,
+    "label": {
+      "pos": "above"
+    },
+    "intro": "Une petite mer intérieure semée d'îles, ouverte sur l'Atlantique par un étroit goulet.",
+    "presentation": [
+      "Le golfe du Morbihan — « petite mer » en breton — est une vaste baie intérieure parsemée d'îles, reliée à l'océan par un passage resserré où les courants sont forts.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  },
+  {
+    "slug": "bretagne",
+    "name": "Bretagne",
+    "breton": "Breizh",
+    "type": "région",
+    "departement": "",
+    "lon": null,
+    "lat": null,
+    "intro": "La péninsule bretonne dans son ensemble : littoral, intérieur, paysages et sociétés.",
+    "presentation": [
+      "Péninsule tournée vers l'Atlantique et la Manche, la Bretagne possède l'un des littoraux les plus découpés de France. Ses îles en sont le prolongement en mer.",
+      "Présentation à compléter par l'auteur. <!-- À VÉRIFIER -->"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "jlescoat-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine de Jacques Lescoat, géographe — livres sur la Bretagne et ses îles.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node build.js --watch --serve",
+    "build": "node build.js",
+    "preview": "node build.js && node scripts/serve.js",
+    "check": "node scripts/check-links.js",
+    "deploy": "./deploy.sh deploy",
+    "deploy:init": "./deploy.sh init",
+    "deploy:rollback": "./deploy.sh rollback",
+    "deploy:status": "./deploy.sh status"
+  },
+  "devDependencies": {
+    "@fontsource-variable/fraunces": "5.3.0",
+    "@fontsource/atkinson-hyperlegible": "5.3.0",
+    "sharp": "0.35.5",
+    "tailwindcss": "3.4.19"
+  }
+}
