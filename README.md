@@ -43,9 +43,8 @@ src/components/           carte SVG, fond de carte, visuels de substitution
 src/styles/main.css       styles (Tailwind + direction artistique)
 src/js/                   scripts navigateur
 build.js                  générateur → dist/
-deploy.sh                 init / deploy / rollback / status
-deploy/nginx/*.conf.tpl   vhost Nginx (injecté par deploy.sh init)
-deploy/remote/init.sh     script serveur exécuté par deploy.sh init
+deploy.sh                 déploiement, fichier unique : init / deploy / rollback / status
+                          (script serveur et vhost Nginx intégrés)
 TODO-CONTENU.md           contenus à fournir ou vérifier
 ```
 
