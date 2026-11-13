@@ -443,6 +443,7 @@ trouver_cert() {
 configurer_nginx_https() {
   etape "Vhost Nginx et certificat HTTPS"
   calculer_csp
+  CERT_NOUVEAU=0
   if CERT_DIR="$(trouver_cert)"; then
     ok "Certificat valide : $CERT_DIR (expire le $(openssl x509 -enddate -noout -in "$CERT_DIR/fullchain.pem" | cut -d= -f2))"
     installer_conf "$(render "$CERT_DIR")"
@@ -455,6 +456,7 @@ configurer_nginx_https() {
     run certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos "${compte[@]}" --redirect
     if [[ $DRY_RUN == 1 ]]; then run "installer ensuite le vhost complet (HTTPS, HTTP/2, en-têtes de sécurité, CSP)"; else
       CERT_DIR="$(trouver_cert)" || die "Certificat introuvable après certbot." "sudo certbot certificates"
+      CERT_NOUVEAU=1
       ok "Certificat obtenu : $CERT_DIR"
       installer_conf "$(render "$CERT_DIR")"
     fi
@@ -468,12 +470,19 @@ configurer_nginx_https() {
   else
     warn "Aucun timer certbot trouvé : vérifiez avec  systemctl list-timers | grep certbot"
   fi
-  if [[ $DRY_RUN == 1 || -z "${CERT_DIR:-}" ]]; then
-    run certbot renew --dry-run --cert-name "$DOMAIN"
-  elif certbot renew --dry-run --cert-name "$(basename "$CERT_DIR")" -q 2>/dev/null; then
-    ok "certbot renew --dry-run : OK"
+  # Répétition du renouvellement : uniquement juste après l'obtention du certificat,
+  # limitée à 2 minutes et non bloquante (Let's Encrypt peut être lent à répondre).
+  if [[ $DRY_RUN == 1 ]]; then
+    run "timeout 120 certbot renew --dry-run (seulement si un certificat vient d'être obtenu)"
+  elif [[ "${CERT_NOUVEAU:-0}" == 1 ]]; then
+    info "Test du renouvellement auprès de Let's Encrypt (jusqu'à 2 min)…"
+    if timeout 120 certbot renew --dry-run --non-interactive --cert-name "$(basename "$CERT_DIR")" -q 2>/dev/null; then
+      ok "certbot renew --dry-run : OK"
+    else
+      warn "Test de renouvellement en échec ou trop long (non bloquant). À vérifier plus tard : sudo certbot renew --dry-run"
+    fi
   else
-    warn "certbot renew --dry-run a échoué : voir /var/log/letsencrypt/letsencrypt.log"
+    info "Test de renouvellement ignoré (certificat déjà en place). Pour le lancer : sudo certbot renew --dry-run"
   fi
 }
 
