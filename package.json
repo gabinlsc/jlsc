@@ -11,11 +11,7 @@
     "dev": "node build.js --watch --serve",
     "build": "node build.js",
     "preview": "node build.js && node scripts/serve.js",
-    "check": "node scripts/check-links.js",
-    "deploy": "./deploy.sh deploy",
-    "deploy:init": "./deploy.sh init",
-    "deploy:rollback": "./deploy.sh rollback",
-    "deploy:status": "./deploy.sh status"
+    "check": "node scripts/check-links.js"
   },
   "devDependencies": {
     "@fontsource-variable/fraunces": "5.3.0",

@@ -13,7 +13,7 @@
     "sameAs": []
   },
   "forms": {
-    "_aide": "contactAction / notifyAction : 'mailto:' (défaut, ouvre la messagerie du visiteur) ou URL d'un service de formulaire (ex. https://formspree.io/f/xxxx). Relancer ./deploy.sh init après changement d'URL (CSP).",
+    "_aide": "contactAction / notifyAction : 'mailto:' (défaut, ouvre la messagerie du visiteur) ou URL d'un service de formulaire (ex. https://formspree.io/f/xxxx). La CSP Nginx est mise à jour au prochain déploiement.",
     "contactAction": "mailto:",
     "notifyAction": "mailto:"
   },
@@ -43,7 +43,7 @@
     "dedicace": "Dédicace possible sur demande : précisez le prénom souhaité dans la note de commande."
   },
   "analytics": {
-    "_aide": "Désactivé par défaut (aucune bannière cookies nécessaire). provider : 'plausible' ou 'umami'. Relancer ./deploy.sh init après activation (CSP).",
+    "_aide": "Désactivé par défaut (aucune bannière cookies nécessaire). provider : 'plausible' ou 'umami'. La CSP Nginx est mise à jour au prochain déploiement.",
     "enabled": false,
     "provider": "plausible",
     "src": "https://plausible.io/js/script.js",

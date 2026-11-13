@@ -52,7 +52,7 @@ Les 3 livres actuels sont des **exemples** (pastille « Livre d'exemple » visib
 
 ## 7. Formulaires — `site.config.json` (section `forms`)
 
-- [ ] Par défaut, les formulaires ouvrent la messagerie du visiteur (`mailto:`). Pour un envoi direct sans messagerie, créer un formulaire chez un service (ex. Formspree, Basin) et coller son URL dans `contactAction` / `notifyAction`, puis relancer `npm run deploy:init` (CSP) et nommer ce service dans la politique de confidentialité.
+- [ ] Par défaut, les formulaires ouvrent la messagerie du visiteur (`mailto:`). Pour un envoi direct sans messagerie, créer un formulaire chez un service (ex. Formspree, Basin) et coller son URL dans `contactAction` / `notifyAction`, puis relancer le déploiement (la CSP est mise à jour automatiquement) et nommer ce service dans la politique de confidentialité.
 
 ## 8. Fond de carte — `src/components/fond-de-carte.js`
 
@@ -71,4 +71,4 @@ Méthode conseillée : découper l'emprise (5,65° O – 1,3° O, 46,85° N – 
 
 - [ ] Image de partage : tester un lien dans Facebook ([débogueur de partage](https://developers.facebook.com/tools/debug/)) et WhatsApp.
 - [ ] Déclarer le site dans Google Search Console et soumettre `https://jlescoat.glsc.fr/sitemap.xml`.
-- [ ] (Facultatif) Activer une mesure d'audience sans cookie (Plausible ou Umami) dans `site.config.json`, puis `npm run deploy:init`.
+- [ ] (Facultatif) Activer une mesure d'audience sans cookie (Plausible ou Umami) dans `site.config.json`, puis relancer le déploiement.

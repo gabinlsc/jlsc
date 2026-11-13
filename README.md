@@ -43,8 +43,7 @@ src/components/           carte SVG, fond de carte, visuels de substitution
 src/styles/main.css       styles (Tailwind + direction artistique)
 src/js/                   scripts navigateur
 build.js                  générateur → dist/
-deploy.sh                 déploiement, fichier unique : init / deploy / rollback / status
-                          (script serveur et vhost Nginx intégrés)
+deploy.sh                 déploiement, à lancer sur le serveur (curl … | sudo bash)
 TODO-CONTENU.md           contenus à fournir ou vérifier
 ```
 
@@ -54,7 +53,7 @@ TODO-CONTENU.md           contenus à fournir ou vérifier
 2. `territoires` : slugs existants de `data/territoires.json`. `themes` : libres (alimentent le filtre du catalogue).
 3. Déposer la couverture à l'emplacement indiqué par `cover` (ex. `assets/covers/<slug>.jpg`, 1200 px de large conseillés). Sans fichier, une couverture provisoire est dessinée.
 4. Retirer `"exemple": true` ; mettre `"featured": true` sur le livre à la une.
-5. `npm run build`, puis `npm run deploy`.
+5. `npm run build` pour vérifier, puis pousser sur GitHub et relancer la commande de déploiement sur le serveur.
 
 Champs : `slug, title, subtitle, year, pages, isbn, price ("18,00 €"), format, territoires[], themes[], cover, synopsis, extract, tableOfContents[], payhipProductId, payhipUrl, exemple, featured`.
 
@@ -71,18 +70,23 @@ Ajouter un objet dans `data/territoires.json` : `slug`, `name`, `breton`, `type`
 1. Créer le produit sur payhip.com (livre papier : produit **physique**, régler les frais de port — minimum légal pour les livres, voir CGV).
 2. Copier l'ID du produit (la fin de l'adresse `payhip.com/b/AbC12` → `AbC12`).
 3. Le coller dans `payhipProductId` du livre dans `data/books.json` (et le prix dans `price`).
-4. `npm run build`
-5. `npm run deploy` — le bouton « Acheter » ouvre alors le paiement Payhip ; sans ID, il ouvre la modale « Bientôt disponible ».
+4. `npm run build` pour vérifier
+5. Pousser sur GitHub puis relancer la commande de déploiement sur le serveur — le bouton « Acheter » ouvre alors le paiement Payhip ; sans ID, il ouvre la modale « Bientôt disponible ».
 
 ## Déploiement
 
-1. DNS : chez le gestionnaire de `glsc.fr`, enregistrement **A** `jlescoat` → IP du VPS.
-2. Accès SSH par clé pour un utilisateur sudo non-root : `ssh-copy-id utilisateur@vps`.
-3. `cp deploy.config.env.example deploy.config.env`, puis renseigner `SSH_HOST`, `SSH_USER`, `CERTBOT_EMAIL`.
-4. Une seule fois : `npm run deploy:init` (Nginx, HTTPS Let's Encrypt, en-têtes ; ne touche à aucun autre site ; `--dry-run` pour simuler).
-5. À chaque mise à jour : `npm run deploy` (build, envoi, bascule atomique, healthcheck, rollback automatique si échec).
-6. Retour arrière : `npm run deploy:rollback` · état : `npm run deploy:status`.
-7. Après avoir changé l'URL des formulaires ou activé l'analytics, relancer `npm run deploy:init` (mise à jour de la CSP).
+Tout se fait **sur le serveur**, avec une seule commande (aucun fichier à copier ni à remplir) :
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/gabinlsc/jlsc/main/deploy.sh | sudo EMAIL=ton@email.fr bash
+```
+
+1. Prérequis DNS : chez le gestionnaire de `glsc.fr`, enregistrement **A** `jlescoat` → IP du VPS.
+2. La même commande sert pour l'installation et pour chaque mise à jour : elle installe ce qui manque (Nginx, Certbot, Node dans `/opt/jlescoat/node`), récupère le code, construit le site, met en place HTTPS et met en ligne sans coupure. Elle ne touche à aucun autre site du serveur.
+3. Si le healthcheck échoue, la version précédente est remise en ligne automatiquement.
+4. Retour arrière : `… | sudo bash -s -- rollback` · état : `… | sudo bash -s -- status` · simulation : `… | sudo bash -s -- --dry-run`.
+5. Dépôt privé : ajouter `GITHUB_TOKEN=<jeton en lecture>` après `sudo` (dans `curl`, ajouter aussi `-H "Authorization: token <jeton>"`).
+6. Autres réglages possibles : `BRANCH`, `DOMAIN`, `WEB_ROOT`, `KEEP_RELEASES` (voir l'en-tête de `deploy.sh`).
 
 ### Vérifications après déploiement
 
@@ -104,7 +108,6 @@ echo | openssl s_client -connect jlescoat.glsc.fr:443 -servername jlescoat.glsc.
 
 Test complet du certificat : https://www.ssllabs.com/ssltest/analyze.html?d=jlescoat.glsc.fr (objectif A ou A+). En-têtes : https://securityheaders.com/?q=jlescoat.glsc.fr
 
-`sudo` demande le mot de passe de l'utilisateur sur le serveur lors de `init`, puis une fois par `deploy` (rechargement de Nginx). Lancé sans terminal (CI), `deploy.sh` utilise `sudo -n` : l'utilisateur doit alors être en `NOPASSWD`.
 
 ## Choix techniques
 
