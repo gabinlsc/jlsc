@@ -1,0 +1,9 @@
+# Dépendances et build
+node_modules/
+dist/
+.cache/
+
+# Divers
+.DS_Store
+*.log
+.env

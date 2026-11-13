@@ -1,0 +1,22 @@
+{
+  "_commentaire": "Biographie de l'auteur. 'provisoire': true affiche un bandeau discret « texte en cours de relecture » ; passer à false une fois le texte validé.",
+  "provisoire": true,
+  "accroche": "Géographe, Jacques Lescoat raconte la Bretagne et ses îles : leurs côtes, leurs paysages et la façon dont on y vit.",
+  "bioCourte": "Jacques Lescoat est géographe. Ses livres décrivent la Bretagne et, plus particulièrement, ses îles : comment elles se sont formées, comment on les habite, ce qui les relie au continent. Il écrit pour tous les curieux, sans jargon, avec le souci de la précision.",
+  "bio": [
+    "Jacques Lescoat est géographe. [Formation et parcours universitaire à préciser.] <!-- À RELIRE -->",
+    "Depuis [date à préciser], il consacre ses recherches et ses livres à la Bretagne, et tout particulièrement à ses îles, du Ponant au golfe du Morbihan. Son approche est celle du terrain : observer les paysages, lire les cartes anciennes et récentes, écouter ceux qui vivent les lieux. <!-- À RELIRE -->",
+    "Ses ouvrages s'adressent à un large public — habitants, visiteurs, enseignants, bibliothèques — et cherchent à rendre la géographie concrète : expliquer pourquoi une côte a telle forme, pourquoi un bourg s'est installé ici plutôt que là, comment une île vit au rythme des bateaux et des saisons. <!-- À RELIRE -->",
+    "Il donne régulièrement des conférences et des séances de dédicace en Bretagne. [Liens institutionnels, associations, distinctions éventuelles à préciser.] <!-- À RELIRE -->"
+  ],
+  "parcours": [
+    { "periode": "[Années]", "texte": "[Étape du parcours à préciser : études de géographie, établissement, diplôme.]" },
+    { "periode": "[Années]", "texte": "[Étape du parcours à préciser : enseignement, recherche, poste occupé.]" },
+    { "periode": "[Années]", "texte": "[Étape du parcours à préciser : premiers travaux et publications sur les îles bretonnes.]" }
+  ],
+  "travaux": [
+    "Géographie des îles bretonnes : formes du littoral, habitat, liaisons maritimes.",
+    "Paysages et aménagement du littoral breton.",
+    "[Autres thèmes de recherche à préciser.]"
+  ]
+}
